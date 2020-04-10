@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8"/>
     <style type="text/css">
     
     body {
@@ -134,12 +135,6 @@
         
       <p>Here&rsquo;s how to interpret the model: Each coefficient represents the percentage-point change in a county&rsquo;s movement when the given characteristic increases from the 25th to 75th percentile among all counties. Negative values indicate more distancing. These estimates are adjusted for the influences of all other characteristics, meaning that each coefficient captures the unique contribution of a characteristic. The 95% confidence interval represents the range of uncertainty around the estimated coefficient.</p>
       
-      <noscript>Sorry, your browser does not support JavaScript!</noscript>
-      
-      <script>
-document.getElementById("demo").innerHTML = "Hello JavaScript!";
-</script>
-      
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
       <script>
@@ -157,12 +152,16 @@ document.getElementById("demo").innerHTML = "Hello JavaScript!";
 
     $.ajax({
         type: "GET",
-        url: "https://github.com/nolankav/covid19model/blob/master/Regression%20model.csv",
+        url: "https://raw.githubusercontent.com/nolankav/covid19model/master/Regression%20model.csv",
         success: function (data) {
             $('body').append(arrayToTable(Papa.parse(data).data));
         }
     });
 </script>
+      
+      <script>console.log('some text')</script>
+      
+      <p>test.</p>
       
       <p>Many county-level characteristics are associated with social distancing efforts. Higher per capita income, share of residents with college degrees, and more foreign-born residents all predict more social distancing. By contrast, a higher share of racial minorities, rurality, and more residents with health insurance are associated with less distancing.</p>
     
