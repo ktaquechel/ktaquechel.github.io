@@ -2,6 +2,7 @@
 <html>
   <head>
     <style type="text/css">
+    
     body {
       font-family: Georgia, serif;
     }
@@ -55,7 +56,8 @@
        border: 1px black solid;
        padding: 5px;
      }
-    
+     
+     
     </style>
     
   </head>
@@ -65,6 +67,7 @@
     <div class="header">
       
       <h1>Association of County-Level Socioeconomic Characteristics with Engagement in Social Distancing for COVID-19</h1>
+      </div>
       
       <div class="thin">
       
@@ -117,16 +120,45 @@
     
     <img src="https://github.com/nolankav/covid19model/blob/master/Distancing%20by%20income.png?raw=true" alt="Distancing by income" width=100% height=auto>
       
-      
     <hr>
     
     <h2>County-Level Correlates of Social Distancing</h2>
     
     <p>While the correlation between per capita income and social distancing is striking, a multivariable regression allows us to more rigorously test the relationship between socioeconomic status and distancing. For example, income and education are tightly tied together, and education might produce a similar looking graph. However, a regression model can tease apart their unique contributions to social distancing.</p>
     
-        <p>We include a variety of sociodemographic, socioeconomic, and labor market characteristics in our model. These characteristics collectively capture many of the structural barriers to a community&rsquo;s engagement in social distancing.</p>
+    <p>We include a variety of sociodemographic, socioeconomic, and labor market characteristics in our model. These characteristics collectively capture many of the structural barriers to a community&rsquo;s engagement in social distancing.</p>
         
       <p>Here&rsquo;s how to interpret the model: Each coefficient represents the percentage-point change in a county&rsquo;s movement when the given characteristic increases from the 25th to 75th percentile among all counties. Negative values indicate more distancing. These estimates are adjusted for the influences of all other characteristics, meaning that each coefficient captures the unique contribution of a characteristic. The 95% confidence interval represents the range of uncertainty around the estimated coefficient.</p>
+      
+      <noscript>Sorry, your browser does not support JavaScript!</noscript>
+      
+      <script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>
+      
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+      <script>
+    function arrayToTable(tableData) {
+        var table = $('<table></table>');
+        $(tableData).each(function (i, rowData) {
+            var row = $('<tr></tr>');
+            $(rowData).each(function (j, cellData) {
+                row.append($('<td>'+cellData+'</td>'));
+            });
+            table.append(row);
+        });
+        return table;
+    }
+
+    $.ajax({
+        type: "GET",
+        url: "https://github.com/nolankav/covid19model/blob/master/Regression%20model.csv",
+        success: function (data) {
+            $('body').append(arrayToTable(Papa.parse(data).data));
+        }
+    });
+</script>
       
       <p>Many county-level characteristics are associated with social distancing efforts. Higher per capita income, share of residents with college degrees, and more foreign-born residents all predict more social distancing. By contrast, a higher share of racial minorities, rurality, and more residents with health insurance are associated with less distancing.</p>
     
