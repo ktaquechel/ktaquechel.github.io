@@ -1,126 +1,148 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8"/>
-      <style type="text/css">
-         body {
-         font-family: Georgia, serif;
-         }
-         h1 {
-         font-family: "Palatino", sans-serif;
-         font-size: 40px;
-         text-align: center;
-         line-height: 1.5;
-         }
-         h2 {
-         font-family: "Palatino", sans-serif;
-         font-size: 28px;
-         }
-         h3 {
-         font-family: "Palatino", sans-serif;
-         font-size: 24px;
-         text-align: center;
-         line-height: 1.5;
-         }
-         p {
-         line-height: 1.75;
-         font-size: 18px;
-         }
-         div.header {
-         width: 1100px;
-         margin: auto;
-         }
-         div.wide {
-         width: 1200px;
-         margin: auto;
-         }
-         div.thin {
-         width: 720px;
-         margin: auto;
-         }
-         table {
-         font-family: "Palatino", sans-serif;
-         border-collapse: collapse;
-         text-align: center;
-         font-size: 18px;
-         }
-         th {
-         font-family: "Palatino", sans-serif;
-         border-bottom: 10px solid #ddd;
-         }
-         td {
-         padding: 10px;
-         border-bottom: 1px solid #ddd;
-         }
-      </style>
-   </head>
-   <body>
-      <div class="header">
-         <h1>Association of County-Level Socioeconomic Characteristics with Engagement in Social Distancing for COVID-19</h1>
-      </div>
-      <div class="thin">
-         <h3>Nolan M. Kavanagh, M.P.H., Rishi R. Goel, M.Sc.,<br/>Atheendar S. Venkataramani, M.D., Ph.D.</h3>
-         <p><b>Author affliliations:</b><br/>
-            University of Pennsylvania, Perelman School of Medicine<br/>
-            University of Pennsylvania, Leonard Davis Institute of Health Economics</p>
-         <hr>
-         <p align=center>Original research letter available at JAMA Network Open.</p>
-         <hr>
-         <p align=center>These data were last updated on <b>April 9, 2020</b>.</p>
-         <hr>
-         <h2>Introduction</h2>
-         <p>The U.S. is the epicenter of the <a href="https://www.nytimes.com/news-event/coronavirus" target="_blank">coronavirus disease 2019</a> (COVID-19) pandemic. Early modeling studies <a href="https://spiral.imperial.ac.uk/handle/10044/1/77482" target="_blank">suggested</a> that, without mitigation efforts, rising numbers of COVID-19 cases may overwhelm the health system&rsquo;s capacity and result in millions of deaths. As a result, federal, state, and local governments have implemented a patchwork of public health measures to slow transmission through &ldquo;social distancing.&rdquo;</p>
-         <p>The effectiveness of social distancing policies requires significant engagement from communities. However, many communities face structural barriers that may prevent them from successfully adhering to these policies. These barriers include employment constraints, educational attainment, and the rurality of the community.</p>
-         <p>In this dynamic model, you can see how much Americans are engaging in social distancing over the last 10 days, as well as which socioeconomic characteristics correlate with changes in average county movement. Importantly, the regression model adjusts for the effects of each characteristic, allowing us to evaluate their relative influence.</p>
-         <p>We measure social distancing as changes in county-level averages of distance traveled per person. <a href="https://www.unacast.com/covid19" target="_blank">Unacast</a> estimates these averages using 15&ndash;17 million anonymized cell phone records, relative to matched days of a pre-COVID-19 reference week. The model regularly updates with new data. County-level socioeconomic characteristics were obtained from the American Community Survey (5-year averages from 2014&ndash;2018) and Census.</p>
-         <hr>
-         <h2>Social Distancing among U.S. Counties</h2>
-         <p>The vast majority of counties in the U.S. are engaging in some degree of social distancing. This graph depicts changes in daily movement since March 1, 2020, relative to matched days of a pre-COVID-19 reference week. Each line represents a single county. Negative values indicate more social distancing, or less movement, in the county.</p>
-      </div>
-      <div class="wide">
-         <img src="https://github.com/nolankav/covid19model/blob/master/Distancing%20over%20time.png?raw=true" alt="Distancing over time" width=100% height=auto>
-      </div>
-      <div class="thin">
-         <p>The highlighted grey area indicates the 10-day period that we use to model socioeconomic determinants of social distancing in our analyses. A 10-day period helps ensure that uncommon events and random variations in measurement do not bias our estimates.</p>
-         <hr>
-         <h2>Association between Income and Social Distancing</h2>
-         <p>Existing research has documented the many ways in which <a href="https://www.healthaffairs.org/doi/abs/10.1377/hlthaff.2011.0685" target="_blank">socioeconomic status impacts health</a>. Reduced economic opportunity hampers a community&rsquo;s ability to take protective measures, which is relevant during a pandemic. For example, people of lower income may be less able to take days off of work or have a job that permits off-site work.</p>
-         <p>Here, we plot a county&rsquo;s per capita income, a measure of average socioeconomic status, against change in movement for the last 10 days. We find that income is a strong predictor of social distancing. As before, negative values indicate more distancing.</p>
-         <img src="https://github.com/nolankav/covid19model/blob/master/Distancing%20by%20income.png?raw=true" alt="Distancing by income" width=100% height=auto>
-         <hr>
-         <h2>County-Level Correlates of Social Distancing</h2>
-         <p>While the correlation between per capita income and social distancing is striking, a multivariable regression allows us to more rigorously test the relationship between socioeconomic status and distancing. For example, income and education are tightly tied together, and education might produce a similar looking graph. However, a regression model can tease apart their unique contributions to social distancing.</p>
-         <p>We include a variety of sociodemographic, socioeconomic, and labor market characteristics in our model. These characteristics collectively capture many of the structural barriers to a community&rsquo;s engagement in social distancing.</p>
-         <p>Here&rsquo;s how to interpret the model: Each coefficient represents the percentage-point change in a county&rsquo;s movement when the given characteristic increases from the 25th to 75th percentile among all counties. Negative values indicate more distancing. These estimates are adjusted for the influences of all other characteristics, meaning that each coefficient captures the unique contribution of a characteristic. The 95% confidence interval represents the range of uncertainty around the estimated coefficient.</p>
-         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
-         <script>
+
+<head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        body {
+            font-family: Georgia, serif;
+        }
+        
+        h1 {
+            font-family: "Palatino", sans-serif;
+            font-size: 40px;
+            text-align: center;
+            line-height: 1.5;
+        }
+        
+        h2 {
+            font-family: "Palatino", sans-serif;
+            font-size: 28px;
+        }
+        
+        h3 {
+            font-family: "Palatino", sans-serif;
+            font-size: 24px;
+            text-align: center;
+            line-height: 1.5;
+        }
+        
+        p {
+            line-height: 1.75;
+            font-size: 18px;
+        }
+        
+        div.header {
+            width: 1100px;
+            margin: auto;
+        }
+        
+        div.wide {
+            width: 1200px;
+            margin: auto;
+        }
+        
+        div.thin {
+            width: 720px;
+            margin: auto;
+        }
+        
+        table {
+            font-family: "Palatino", sans-serif;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        th {
+            font-family: "Palatino", sans-serif;
+            border-bottom: 10px solid #ddd;
+        }
+        
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:first-child, td:first-child {
+           font-weight: bold
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Association of County-Level Socioeconomic Characteristics with Engagement in Social Distancing for COVID-19</h1>
+    </div>
+    <div class="thin">
+        <h3>Nolan M. Kavanagh, M.P.H., Rishi R. Goel, M.Sc.,<br/>Atheendar S. Venkataramani, M.D., Ph.D.</h3>
+        <p><b>Author affliliations:</b>
+            <br/> University of Pennsylvania, Perelman School of Medicine
+            <br/> University of Pennsylvania, Leonard Davis Institute of Health Economics</p>
+        <hr>
+        <p align=center>Original research letter available at JAMA Network Open.</p>
+        <hr>
+        <p align=center>These data were last updated on <b>April 9, 2020</b>.</p>
+        <hr>
+        <h2>Introduction</h2>
+        <p>The U.S. is the epicenter of the <a href="https://www.nytimes.com/news-event/coronavirus" target="_blank">coronavirus disease 2019</a> (COVID-19) pandemic. Early modeling studies <a href="https://spiral.imperial.ac.uk/handle/10044/1/77482" target="_blank">suggested</a> that, without mitigation efforts, rising numbers of COVID-19 cases may overwhelm the health system&rsquo;s capacity and result in millions of deaths. As a result, federal, state, and local governments have implemented a patchwork of public health measures to slow transmission through &ldquo;social distancing.&rdquo;</p>
+        <p>The effectiveness of social distancing policies requires significant engagement from communities. However, many communities face structural barriers that may prevent them from successfully adhering to these policies. These barriers include employment constraints, educational attainment, and the rurality of the community.</p>
+        <p>In this dynamic model, you can see how much Americans are engaging in social distancing over the last 10 days, as well as which socioeconomic characteristics correlate with changes in average county movement. Importantly, the regression model adjusts for the effects of each characteristic, allowing us to evaluate their relative influence.</p>
+        <p>We measure social distancing as changes in county-level averages of distance traveled per person. <a href="https://www.unacast.com/covid19" target="_blank">Unacast</a> estimates these averages using 15&ndash;17 million anonymized cell phone records, relative to matched days of a pre-COVID-19 reference week. The model regularly updates with new data. County-level socioeconomic characteristics were obtained from the American Community Survey (5-year averages from 2014&ndash;2018) and Census.</p>
+        <hr>
+        <h2>Social Distancing among U.S. Counties</h2>
+        <p>The vast majority of counties in the U.S. are engaging in some degree of social distancing. This graph depicts changes in daily movement since March 1, 2020, relative to matched days of a pre-COVID-19 reference week. Each line represents a single county. Negative values indicate more social distancing, or less movement, in the county.</p>
+    </div>
+    <div class="wide">
+        <img src="https://github.com/nolankav/covid19model/blob/master/Distancing%20over%20time.png?raw=true" alt="Distancing over time" width=100% height=auto>
+    </div>
+    <div class="thin">
+        <p>The highlighted grey area indicates the 10-day period that we use to model socioeconomic determinants of social distancing in our analyses. A 10-day period helps ensure that uncommon events and random variations in measurement do not bias our estimates.</p>
+        <hr>
+        <h2>Association between Income and Social Distancing</h2>
+        <p>Existing research has documented the many ways in which <a href="https://www.healthaffairs.org/doi/abs/10.1377/hlthaff.2011.0685" target="_blank">socioeconomic status impacts health</a>. Reduced economic opportunity hampers a community&rsquo;s ability to take protective measures, which is relevant during a pandemic. For example, people of lower income may be less able to take days off of work or have a job that permits off-site work.</p>
+        <p>Here, we plot a county&rsquo;s per capita income, a measure of average socioeconomic status, against change in movement for the last 10 days. We find that income is a strong predictor of social distancing. As before, negative values indicate more distancing.</p>
+        <img src="https://github.com/nolankav/covid19model/blob/master/Distancing%20by%20income.png?raw=true" alt="Distancing by income" width=100% height=auto>
+        <hr>
+        <h2>County-Level Correlates of Social Distancing</h2>
+        <p>While the correlation between per capita income and social distancing is striking, a multivariable regression allows us to more rigorously test the relationship between socioeconomic status and distancing. For example, income and education are tightly tied together, and education might produce a similar looking graph. However, a regression model can tease apart their unique contributions to social distancing.</p>
+        <p>We include a variety of sociodemographic, socioeconomic, and labor market characteristics in our model. These characteristics collectively capture many of the structural barriers to a community&rsquo;s engagement in social distancing.</p>
+        <p>Here&rsquo;s how to interpret the model: Each coefficient represents the percentage-point change in a county&rsquo;s movement when the given characteristic increases from the 25th to 75th percentile among all counties. Negative values indicate more distancing. These estimates are adjusted for the influences of all other characteristics, meaning that each coefficient captures the unique contribution of a characteristic. The 95% confidence interval represents the range of uncertainty around the estimated coefficient.</p>
+    </div>
+    <div class="wide" align="center">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+        <script>
             function arrayToTable(tableData) {
                 var table = $('<table></table>');
-                $(tableData).each(function (i, rowData) {
+                $(tableData).each(function(i, rowData) {
                     var row = $('<tr></tr>');
-                    $(rowData).each(function (j, cellData) {
-                        row.append($('<td>'+cellData+'</td>'));
+                    $(rowData).each(function(j, cellData) {
+                        row.append($('<td>' + cellData + '</td>'));
                     });
                     table.append(row);
                 });
                 return table;
             }
-            
+
             $.ajax({
                 type: "GET",
                 url: "https://raw.githubusercontent.com/nolankav/covid19model/master/Regression%20model.csv",
-                success: function (data) {
-                    $('body').append(arrayToTable(Papa.parse(data).data));
+                success: function(data) {
+                    $('#covid-table').append(arrayToTable(Papa.parse(data).data));
                 }
             });
-         </script>
-         <p>Many county-level characteristics are associated with social distancing efforts. Higher per capita income, share of residents with college degrees, and more foreign-born residents all predict more social distancing. By contrast, a higher share of racial minorities, rurality, and more residents with health insurance are associated with less distancing.</p>
-         <hr>
-         <h2>What Does This Mean?</h2>
-         <p>Lower socioeconomic status is associated with reduced social distancing among U.S. counties. These results suggest that <a href="https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2015.302941" target="_blank">structural barriers</a> may lead to significant socioeconomic gradients in COVID-19, just as they do for other health conditions.</p>
-         <p>Limitations of our analysis include the potential for omitted-variable and ecological biases due to aggregate, cross-sectional data. Social distancing may also be measured with error, given that the data do not sample all cell-phone users and do not reflect non-users.</p>
-         <p>Regardless, our findings underscore the heterogeneity of communities&rsquo; engagement in public health responses to COVID-19. These patterns may help policymakers and health professionals identify communities that are most vulnerable to transmission and direct resources and communications accordingly. Additional research as new data become available is necessary to correlate these findings with infection rates and mortality.</p>
-      </div>
-   </body>
+        </script>
+        <div id="covid-table"></div>
+    </div>
+    <div class="thin">
+        <p>Many county-level characteristics are associated with social distancing efforts. Higher per capita income, share of residents with college degrees, and more foreign-born residents all predict more social distancing. By contrast, a higher share of racial minorities, rurality, and more residents with health insurance are associated with less distancing.</p>
+        <hr>
+        <h2>What Does This Mean?</h2>
+        <p>Lower socioeconomic status is associated with reduced social distancing among U.S. counties. These results suggest that <a href="https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2015.302941" target="_blank">structural barriers</a> may lead to significant socioeconomic gradients in COVID-19, just as they do for other health conditions.</p>
+        <p>Limitations of our analysis include the potential for omitted-variable and ecological biases due to aggregate, cross-sectional data. Social distancing may also be measured with error, given that the data do not sample all cell-phone users and do not reflect non-users.</p>
+        <p>Regardless, our findings underscore the heterogeneity of communities&rsquo; engagement in public health responses to COVID-19. These patterns may help policymakers and health professionals identify communities that are most vulnerable to transmission and direct resources and communications accordingly. Additional research as new data become available is necessary to correlate these findings with infection rates and mortality.</p>
+    </div>
+</body>
+
 </html>
