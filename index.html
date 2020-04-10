@@ -95,15 +95,39 @@
       
     <hr>
     
-    <h2>Socioeconomic Correlates of Social Distancing</h2>
+    <h2>Association between Income and Social Distancing</h2>
     
     <p>Existing research has documented the many ways in which <a href="https://www.healthaffairs.org/doi/abs/10.1377/hlthaff.2011.0685">socioeconomic status impacts health</a>. Reduced economic opportunity hampers a community&rsquo;s ability to take protective measures, which is relevant during a pandemic. For example, people of lower-income may be less able to take days off of work or have a job that permits off-site work.</p>
     
-    <p>Here, we plot two measures of a county's socioeconomic status against its change in average movement: per capita income and share of residents with a college degree. As before, negative values for change in movement indicate more social distancing.</p>
+    <p>Here, we plot a county&rsquo;s per capita income, a measure of average socioeconomic status, against its change in movement for the last 10 days. We find that income is a strong predictor of social distancing. As before, negative values indicate more distancing.</p>
     
     <img src="https://github.com/nolankav/covid19model/blob/master/Distancing%20by%20income.png?raw=true" alt="Distancing by income" width=100% height=auto>
       
       
+    <hr>
+    
+    <h2>County-Level Correlates of Social Distancing</h2>
+    
+    <p>While the correlation between per capita income and social distancing is striking, a multivariable regression allows us to more rigorously test the relationship between socioeconomic status and distancing. For example, income and education are tied highly together, and education might produce a similar looking graph. However, a regression model can tease apart their unique contributions to social distancing.</p>
+    
+        <p>We include a variety of sociodemographic, socioeconomic, and labor market characteristics in our model. These characteristics collectively capture many of the structural barriers to a community&rsquo;s engagement in social distancing.</p>
+        
+      <p>Here&rsquo;s how to interpret the model: Each coefficient represents the percentage-point change in a county&rsquo;s movement when the given characteristic changes from the 25th to 75th percentile among all counties. Negative values indicate more distancing. These estimates are adjusted for the influences of all other characteristics, meaning that each coefficient captures the unique contribution of a characteristic. The 95% confidence interval represents the range of uncertainty around the estimated coefficient.</p>
+      
+      <p>Many of the socioeconomic variables are associated with social distancing efforts. Higher per capita income, share of residents with college degrees, and foreign-born residents all predict more social distancing in a county. By contrast, higher shares of racial minorities, rurality, and residents with health insurance are associated with less distancing.</p>
+    
+    <hr>
+    
+    <h2>What Does This Mean?</h2>
+    
+    <p>Lower socioeconomic status is associated with reduced social distancing among U.S. counties. These results suggest that structural barriers may lead to significant socioeconomic gradients in COVID-19, just as they do for other health conditions.</p>
+    
+    <p>Limitations of our analysis include the potential for omitted-variable and ecological biases due to aggregate, cross-sectional data. Social distancing may also be measured with error, given that the data do not sample all cell-phone users and do not reflect non-users.</p>
+    
+    <p>Regardless, our findings underscore the heterogeneity of communities&rsquo; engagement in public health responses to COVID-19. These patterns may help policymakers and health professionals identify communities that are most vulnerable to transmission and direct resources and communications accordingly. Additional research as new data become available is necessary to correlate these findings with infection rates and mortality.</p>
+
+
+    
     </div>
     
     </body>
