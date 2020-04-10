@@ -64,8 +64,9 @@
             border-bottom: 1px solid #ddd;
         }
         
-        tr:first-child, td:first-child {
-           font-weight: bold
+        tr:first-child,
+        td:first-child {
+            font-weight: bold
         }
     </style>
 </head>
@@ -80,9 +81,9 @@
             <br/> University of Pennsylvania, Perelman School of Medicine
             <br/> University of Pennsylvania, Leonard Davis Institute of Health Economics</p>
         <hr>
-        <p align=center>Original research letter available at JAMA Network Open.</p>
+        <p align=center>Original research letter available at <i>JAMA Network Open</i>.</p>
         <hr>
-        <p align=center>These data were last updated on <b>April 9, 2020</b>.</p>
+        <p align=center>These data were last updated on <b>April 10, 2020</b>.</p>
         <hr>
         <h2>Introduction</h2>
         <p>The U.S. is the epicenter of the <a href="https://www.nytimes.com/news-event/coronavirus" target="_blank">coronavirus disease 2019</a> (COVID-19) pandemic. Early modeling studies <a href="https://spiral.imperial.ac.uk/handle/10044/1/77482" target="_blank">suggested</a> that, without mitigation efforts, rising numbers of COVID-19 cases may overwhelm the health system&rsquo;s capacity and result in millions of deaths. As a result, federal, state, and local governments have implemented a patchwork of public health measures to slow transmission through &ldquo;social distancing.&rdquo;</p>
@@ -95,6 +96,7 @@
     </div>
     <div class="wide">
         <img src="https://github.com/nolankav/covid19model/blob/master/Distancing%20over%20time.png?raw=true" alt="Distancing over time" width=100% height=auto>
+        <p style="color:gray; font-family:Palatino; font-size:15px; line-height: 1.25">Changes relative to matched days of a pre-COVID-19 reference week. Based on 3,037 counties, using anonymized cell phone records from Unacast. Each line represents one county.</p>
     </div>
     <div class="thin">
         <p>The highlighted grey area indicates the 10-day period that we use to model socioeconomic determinants of social distancing in our analyses. A 10-day period helps ensure that uncommon events and random variations in measurement do not bias our estimates.</p>
@@ -103,6 +105,7 @@
         <p>Existing research has documented the many ways in which <a href="https://www.healthaffairs.org/doi/abs/10.1377/hlthaff.2011.0685" target="_blank">socioeconomic status impacts health</a>. Reduced economic opportunity hampers a community&rsquo;s ability to take protective measures, which is relevant during a pandemic. For example, people of lower income may be less able to take days off of work or have a job that permits off-site work.</p>
         <p>Here, we plot a county&rsquo;s per capita income, a measure of average socioeconomic status, against change in movement for the last 10 days. We find that income is a strong predictor of social distancing. As before, negative values indicate more distancing.</p>
         <img src="https://github.com/nolankav/covid19model/blob/master/Distancing%20by%20income.png?raw=true" alt="Distancing by income" width=100% height=auto>
+        <p style="color:gray; font-family:Palatino; font-size:15px; line-height: 1.25">Based on 3,037 counties, using anonymized cell phone records from Unacast and county-level data from the American Community Survey. Each dot represents one county, sized according to population. Fitted line represents linear regression with 95% confidence interval, not adjusted for other county-level characteristics.</p>
         <hr>
         <h2>County-Level Correlates of Social Distancing</h2>
         <p>While the correlation between per capita income and social distancing is striking, a multivariable regression allows us to more rigorously test the relationship between socioeconomic status and distancing. For example, income and education are tightly tied together, and education might produce a similar-looking graph. However, a regression model can tease apart their unique contributions to social distancing.</p>
@@ -136,12 +139,16 @@
         <div id="covid-table"></div>
     </div>
     <div class="thin">
+        <p style="color:gray; font-family:Palatino; font-size:15px; line-height: 1.25">Multivariable ordinary least squares regression for percentage-point change in average county movement, given an interquartile change in given characteristics. Negative values indicate a greater degree of social distancing. Based on 3,037 counties, using data from Unacast, the American Community Survey, and Census. Model includes state fixed effects. 95% confidence intervals are provided.</p>
         <p>Many county-level characteristics are associated with social distancing efforts. Higher per capita income, share of residents with college degrees, and more foreign-born residents all predict more social distancing. By contrast, a higher share of racial minorities, rurality, and more residents with health insurance are associated with less distancing.</p>
         <hr>
         <h2>What Does This Mean?</h2>
         <p>Lower socioeconomic status is associated with reduced social distancing among U.S. counties. These results suggest that <a href="https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2015.302941" target="_blank">structural barriers</a> may lead to significant socioeconomic gradients in COVID-19, just as they do for other health conditions.</p>
         <p>Limitations of our analysis include the potential for omitted-variable and ecological biases due to aggregate, cross-sectional data. Social distancing may also be measured with error, given that the data do not sample all cell-phone users and do not reflect non-users.</p>
         <p>Regardless, our findings underscore the heterogeneity of communities&rsquo; engagement in public health responses to COVID-19. These patterns may help policymakers and health professionals identify communities that are most vulnerable to transmission and direct resources and communications accordingly. Additional research as new data become available is necessary to correlate these findings with infection rates and mortality.</p>
+        <hr>
+        <p align=center>Return to <i>JAMA Network Open</i>.</p>
+        <hr>
     </div>
 </body>
 
